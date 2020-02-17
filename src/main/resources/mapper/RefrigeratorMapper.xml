@@ -1,0 +1,39 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sdinfo.smarthome.rest.refrigerator.mapper.RefrigeratorMapper">
+    <select id="getAll" resultType="com.sdinfo.smarthome.rest.refrigerator.domain.RefrigeratorVo">
+SELECT A.HOME_CODE,       
+       TO_CHAR(A.MDATE,'YYYY-MM-DD HH24:MI:SS') MDATE,
+       A.PRODUCT_TYPE,
+       NVL(A.MODEL_GROUP,'') MODEL_GROUP,
+       A.COOLHIGHTEMP_AD,
+       A.COOLLOWTEMP_AD,
+       A.HEATLOWTEMP_AD,
+       A.HEATHIGHTEMP_AD,
+       A.ROOMTEMP_AD,
+       A.DEFROSTTEMP_AD,
+       A.OUTTEMP_AD,
+       A.FANOUTRPM,
+       A.FANFEEDBACKRPM,
+       nvl(A.LITER,'') LITER,
+       A.HUMIDITY,
+       A.ROOMTEMP,
+       A.DEFROSTTEMP,
+       A.OUTTEMP,
+       A.CHANGESTEP,
+       A.MAINMODEINDEX,
+       A.SUBMODEINDEX,
+       A.LEAKCOUNT,
+       NVL(A.REFRESHTIMER,0) REFRESHTIMER,
+       A.ERRORCODE,
+       A.MOTIONSENSOR,
+       A.DOOROPEN,
+       nvl(TO_NUMBER(A.POWER),''), POWER,
+       A.COMP,
+       A.DRAINHEATER,
+       A.DEFROSTHEATER,
+       A.LAMP,
+       nvl(TO_NUMBER(A.RDATE),''), RDATE
+  FROM TBL_REFRIGERATOR A
+
+    </select>
+</mapper>

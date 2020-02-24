@@ -16,14 +16,14 @@ public class RefrigeratorService {
     RefrigeratorMapper RefrigeratorMapper;
     
     public List<RefrigeratorVo> getAll() throws Exception{
-    	List<RefrigeratorVo> testVo = null;
+    	List<RefrigeratorVo> selectVo = null;
     	
     	try {
-    		testVo = RefrigeratorMapper.getAll();
+    		selectVo = RefrigeratorMapper.TBL_REFRIGERATOR();
     	}catch (Exception e) {
     		e.printStackTrace();
     	}
-        return testVo;
+        return selectVo;
     }
 }
 

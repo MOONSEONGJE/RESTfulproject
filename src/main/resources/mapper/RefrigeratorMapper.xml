@@ -1,6 +1,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sdinfo.smarthome.rest.refrigerator.mapper.RefrigeratorMapper">
-    <select id="getAll" resultType="com.sdinfo.smarthome.rest.refrigerator.domain.RefrigeratorVo">
+    <select id="TBL_REFRIGERATOR" resultType="com.sdinfo.smarthome.rest.refrigerator.domain.RefrigeratorVo">
 SELECT A.HOME_CODE,       
        TO_CHAR(A.MDATE,'YYYY-MM-DD HH24:MI:SS') MDATE,
        A.PRODUCT_TYPE,
@@ -34,6 +34,6 @@ SELECT A.HOME_CODE,
        A.LAMP,
        nvl(TO_NUMBER(A.RDATE),''), RDATE
   FROM TBL_REFRIGERATOR A
-
-    </select>
-</mapper>
+    </select> 
+ </mapper>
+       

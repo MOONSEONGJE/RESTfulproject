@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sdinfo.smarthome.rest.refrigerator.mapper.RefrigeratorMapper">
+	<insert id="inputData"
+      	parameterType="com.sdinfo.smarthome.rest.refrigerator.domain.RefrigeratorVo"
+      	useGeneratedKeys="true"
+      	keyProperty="home_code">
+      INSERT INTO TBL_REFRIGERATOR(
+       'A.HOME_CODE',
+       'A.MDATE',
+       'A.PRODUCT_TYPE',
+       'A.COOLHIGHTEMP_AD',
+       'A.COOLLOWTEMP_AD',
+       'A.HEATLOWTEMP_AD',
+       'A.HEATHIGHTEMP_AD',
+       'A.ROOMTEMP_AD',
+       'A.DEFROSTTEMP_AD',
+       'A.OUTTEMP_AD',
+       'A.FANOUTRPM',
+       'A.FANFEEDBACKRPM',
+       'A.HUMIDITY',
+       'A.ROOMTEMP',
+       'A.DEFROSTTEMP',
+       'A.OUTTEMP',
+       'A.CHANGESTEP',
+       'A.MAINMODEINDEX',
+       'A.SUBMODEINDEX',
+       'A.LEAKCOUNT',
+       'A.ERRORCODE',
+       'A.MOTIONSENSOR',
+       'A.DOOROPEN',
+       'A.COMP',
+       'A.DRAINHEATER',
+       'A.DEFROSTHEATER',
+       'A.LAMP',
+       )
+       VALUES (
+       #{A.HOME_CODE},
+       #{A.MATE},
+       #{A.PRODUCT_TYPE},
+       #{A.COOLHIGHTEMP_AD},
+       #{A.COOLLOWTEMP_AD},
+       #{A.HEATLOWTEMP_AD},
+       #{A.HEATHIGHTEMP_AD},
+       #{A.ROOMTEMP_AD},
+       #{A.DEFROSTTEMP_AD},
+       #{A.OUTTEMP_AD},
+       #{A.FANOUTRPM},
+       #{A.FANFEEDBACKRPM},
+       #{A.HUMIDITY},
+       #{A.ROOMTEMP},
+       #{A.DEFROSTTEMP},
+       #{A.OUTTEMP},
+       #{A.CHANGESTEP},
+       #{A.MAINMODEINDEX},
+       #{A.SUBMODEINDEX},
+       #{A.LEAKCOUNT},
+       #{A.ERRORCODE},
+       #{A.MOTIONSENSOR},
+       #{A.DOOROPEN},
+       #{A.COMP},
+       #{A.DRAINHEATER},
+       #{A.DEFROSTHEATER},
+       #{A.LAMP},
+      </insert>
+    </mapper>

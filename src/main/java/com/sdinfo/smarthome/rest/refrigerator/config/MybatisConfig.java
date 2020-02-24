@@ -5,6 +5,7 @@ import javax.sql.*;
 import org.apache.ibatis.session.*;
 import org.mybatis.spring.*;
 import org.mybatis.spring.annotation.*;
+import org.springframework.boot.SpringApplication;
 import org.springframework.context.annotation.*;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.*;
@@ -14,6 +15,10 @@ import org.springframework.core.io.support.*;
 @MapperScan(basePackages="com.sdinfo.smarthome.rest.refrigerator.mapper")
 //@EnableTransactionManagement
 public class MybatisConfig {
+	
+	public static void main(String[] args) {
+		SpringApplication.run(MybatisConfig.class, args);
+	}
  
     @Bean
     public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
